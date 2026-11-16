@@ -110,18 +110,24 @@ function run() {
   audio.stopVoice();
   els.overlay.hidden = true;
   const mode = modes[modeId];
-  cleanup = mode.start({ pack, stage: els.stage, ui, finish });
+  try {
+    cleanup = mode.start({ pack, stage: els.stage, ui, finish });
+  } catch (e) {
+    showError(e);
+  }
+}
+
+function showError(e) {
+  console.error(e);
+  els.stage.replaceChildren(
+    h('p', { class: 'error' }, 'Хата · Ошибка: ', String(e?.message || e)),
+    h('div', { class: 'btn-row' }, h('button', { class: 'btn btn-main', type: 'button', onclick: () => location.reload() }, icon('replay'), ' Яңадан')));
 }
 
 async function init() {
   refreshToggles();
-  try {
-    pack = await loadPack(packId);
-  } catch (e) {
-    els.stage.replaceChildren(h('p', { class: 'error' }, String(e.message || e)));
-    return;
-  }
-  audio.preload(pack.items);
+  pack = await loadPack(packId);
+  audio.preload?.(pack.items);
   if (pack.settings.imageFit) document.body.dataset.fit = pack.settings.imageFit; // "cover" for photo tiles
   if (!modes[modeId] || !pack.modes.includes(modeId)) modeId = pack.modes[0];
   document.title = `${pack.title} — Уен`;
@@ -133,5 +139,5 @@ async function init() {
 }
 
 window.addEventListener('pagehide', () => audio.stopVoice());
-init();
+init().catch(showError);
 registerSW();

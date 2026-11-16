@@ -2,8 +2,18 @@
 
 export function registerSW() {
   if (!('serviceWorker' in navigator) || location.protocol === 'file:') return;
-  navigator.serviceWorker.register(new URL('../sw.js', import.meta.url), { scope: new URL('../', import.meta.url).pathname })
-    .catch((e) => console.warn('SW registration failed', e));
+  // When a new version of the site takes over, reload once so all files come from the same version.
+  const hadController = !!navigator.serviceWorker.controller;
+  let reloading = false;
+  navigator.serviceWorker.addEventListener('controllerchange', () => {
+    if (!hadController || reloading) return;
+    reloading = true;
+    location.reload();
+  });
+  navigator.serviceWorker.register(new URL('../sw.js', import.meta.url), {
+    scope: new URL('../', import.meta.url).pathname,
+    updateViaCache: 'none',
+  }).then((reg) => reg.update()).catch((e) => console.warn('SW registration failed', e));
 }
 
 export function setupInstallButton(btn) {
