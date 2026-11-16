@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="tt">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Уен</title>
+  <meta name="theme-color" content="#2e9e6a">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/favicon.png">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;800;900&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="play">
+  <header class="topbar">
+    <div class="brand">
+      <a class="round-btn" href="./" aria-label="Башбит">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11l8-7 8 7v9h-5v-6H9v6H4z" fill="currentColor"/></svg>
+      </a>
+      <div>
+        <h1 id="pack-title">…</h1>
+        <div class="sub" id="pack-sub"></div>
+      </div>
+    </div>
+    <div class="tools">
+      <div class="stars-box" id="stars" aria-label="Йолдызлар">⭐ <b id="stars-count">0</b></div>
+      <button class="round-btn ru-btn" id="btn-ru" type="button" title="Русча тәрҗемә / перевод">РУ</button>
+      <button class="round-btn" id="btn-mute" type="button" title="Тавыш / звук"></button>
+    </div>
+  </header>
+
+  <div class="dots" id="dots" aria-hidden="true"></div>
+  <main id="stage" class="stage"></main>
+  <div id="overlay" class="overlay" hidden></div>
+
+  <div class="hill" aria-hidden="true"></div>
+  <script type="module" src="js/play.js"></script>
+</body>
+</html>

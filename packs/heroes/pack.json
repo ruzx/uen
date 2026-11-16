@@ -1,0 +1,51 @@
+{
+  "title": "Әкият геройлары",
+  "subtitle": "Сыйфатлар · прилагательные",
+  "cover": "img/ayu.webp",
+  "modes": ["learn", "quiz"],
+  "settings": { "choices": 4 },
+  "items": [
+    {
+      "id": "kuyan",
+      "words": [{ "tt": "куркак", "ru": "трусливый", "role": "adj" }, { "tt": "куян", "ru": "заяц", "role": "noun" }],
+      "image": "img/kuyan.webp",
+      "audio": "audio/kuyan.wav",
+      "anim": "tremble"
+    },
+    {
+      "id": "ayu",
+      "words": [{ "tt": "көчле", "ru": "сильный", "role": "adj" }, { "tt": "аю", "ru": "медведь", "role": "noun" }],
+      "image": "img/ayu.webp",
+      "audio": "audio/ayu.wav",
+      "anim": "strong"
+    },
+    {
+      "id": "baka",
+      "words": [{ "tt": "кечкенә", "ru": "маленькая", "role": "adj" }, { "tt": "бака", "ru": "лягушка", "role": "noun" }],
+      "image": "img/baka.webp",
+      "audio": "audio/baka.wav",
+      "anim": "tiny"
+    },
+    {
+      "id": "tychkan",
+      "words": [{ "tt": "матур", "ru": "красивая", "role": "adj" }, { "tt": "тычкан", "ru": "мышка", "role": "noun" }],
+      "image": "img/tychkan.webp",
+      "audio": "audio/tychkan.wav",
+      "anim": "pretty"
+    },
+    {
+      "id": "tulke",
+      "words": [{ "tt": "хәйләкәр", "ru": "хитрая", "role": "adj" }, { "tt": "төлке", "ru": "лиса", "role": "noun" }],
+      "image": "img/tulke.webp",
+      "audio": "audio/tulke.wav",
+      "anim": "sly"
+    },
+    {
+      "id": "bure",
+      "words": [{ "tt": "усал", "ru": "злой", "role": "adj" }, { "tt": "бүре", "ru": "волк", "role": "noun" }],
+      "image": "img/bure.webp",
+      "audio": "audio/bure.wav",
+      "anim": "angry"
+    }
+  ]
+}
