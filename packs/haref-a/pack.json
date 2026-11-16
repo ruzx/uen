@@ -1,0 +1,72 @@
+{
+  "title": "А хәрефе",
+  "subtitle": "Сүзләр · слова на букву А",
+  "letter": "А",
+  "modes": [
+    "learn",
+    "quiz",
+    "loto",
+    "loto-ear"
+  ],
+  "settings": {
+    "choices": 4
+  },
+  "items": [
+    {
+      "id": "alma",
+      "tt": "алма",
+      "ru": "яблоко",
+      "image": "img/alma.webp",
+      "audio": "audio/alma.wav"
+    },
+    {
+      "id": "aryslan",
+      "tt": "арыслан",
+      "ru": "лев",
+      "image": "img/aryslan.webp",
+      "audio": "audio/aryslan.wav"
+    },
+    {
+      "id": "avyz",
+      "tt": "авыз",
+      "ru": "рот",
+      "image": "img/avyz.webp",
+      "audio": "audio/avyz.wav"
+    },
+    {
+      "id": "at",
+      "tt": "ат",
+      "ru": "лошадь",
+      "image": "img/at.webp",
+      "audio": "audio/at.wav"
+    },
+    {
+      "id": "ayu",
+      "tt": "аю",
+      "ru": "медведь",
+      "image": "img/ayu.webp",
+      "audio": "audio/ayu.wav"
+    },
+    {
+      "id": "achkych",
+      "tt": "ачкыч",
+      "ru": "ключ",
+      "image": "img/achkych.webp",
+      "audio": "audio/achkych.wav"
+    },
+    {
+      "id": "arba",
+      "tt": "арба",
+      "ru": "тележка",
+      "image": "img/arba.webp",
+      "audio": "audio/arba.wav"
+    },
+    {
+      "id": "ai",
+      "tt": "ай",
+      "ru": "луна, месяц",
+      "image": "img/ai.webp",
+      "audio": "audio/ai.wav"
+    }
+  ]
+}

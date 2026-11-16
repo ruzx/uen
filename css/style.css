@@ -237,3 +237,80 @@ button { font: inherit; color: inherit; cursor: pointer; }
   .round-btn { width: 44px; }
   .stars-box { padding: 0 12px; font-size: 1.05rem; }
 }
+
+/* ---------- letters ---------- */
+.hl { color: #e0302a; }
+.phrase:not(.phrase-big) .phrase-tt { font-size: clamp(1.5rem, 4.6vw, 2.3rem); }
+.overlay-letter {
+  font-size: clamp(6rem, 22vw, 9rem); font-weight: 900; color: #e0302a; line-height: 1;
+  text-shadow: 0 6px 0 rgba(224, 48, 42, .15);
+}
+.pack-cover { text-decoration: none; overflow: hidden; }
+.letter-cover { height: 100%; display: grid; grid-template-columns: 1fr 1fr; align-items: center; padding: 12px 16px; gap: 8px; }
+.letter-big { font-size: clamp(5rem, 13vw, 7.5rem); font-weight: 900; color: #e0302a; line-height: 1; text-align: center; }
+.letter-thumbs { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+.pack-cover .letter-thumbs img { width: 100%; height: auto; aspect-ratio: 1; object-fit: contain; padding: 0; transform: none !important; }
+
+/* ---------- photo tiles (pack.settings.imageFit = "cover") ---------- */
+body[data-fit="cover"] .card { padding: 0; overflow: hidden; }
+body[data-fit="cover"] .card img,
+body[data-fit="cover"] .loto-cell img { object-fit: cover; }
+body[data-fit="cover"] .loto-cell:not(.loto-center):not(.loto-empty) { padding: 0; }
+.pack-cover.fit-cover img { object-fit: cover; padding: 0; }
+
+/* ---------- loto ---------- */
+.loto { display: flex; flex-direction: column; align-items: center; gap: 14px; width: 100%; }
+.loto-board {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px; padding: 4px;
+  background: #1f2a24; border-radius: 20px; box-shadow: var(--shadow);
+  width: min(560px, 94vw, calc(100dvh - 360px)); min-width: 260px;
+}
+.loto-cell {
+  background: #fff; border: 0; padding: 9%; aspect-ratio: 1; position: relative; overflow: hidden;
+  display: grid; place-items: center; border-radius: 4px;
+  transition: background .2s, box-shadow .2s;
+}
+.loto-board > :nth-child(1) { border-top-left-radius: 16px; }
+.loto-board > :nth-child(3) { border-top-right-radius: 16px; }
+.loto-board > :nth-child(7) { border-bottom-left-radius: 16px; }
+.loto-board > :nth-child(9) { border-bottom-right-radius: 16px; }
+.loto-cell img { width: 100%; height: 100%; object-fit: contain; pointer-events: none;
+  opacity: .28; filter: grayscale(.7); transition: opacity .3s, filter .3s; }
+.loto-cell.placed img { opacity: 1; filter: none; }
+.loto-cell.over { box-shadow: inset 0 0 0 6px #5cc48f; background: #effaf3; }
+.loto-cell.placed { box-shadow: inset 0 0 0 4px #8fd6ae; cursor: default; }
+.loto-word {
+  position: absolute; left: 0; right: 0; bottom: 3%; text-align: center; font-weight: 900;
+  font-size: clamp(.75rem, 2.6vmin, 1.25rem); opacity: 0; transform: translateY(8px); transition: all .3s;
+  text-shadow: 0 0 4px #fff, 0 0 8px #fff;
+}
+.loto-cell.placed .loto-word { opacity: 1; transform: none; }
+.loto-center { cursor: default; }
+.loto-letter { font-size: clamp(3rem, 13vmin, 8rem); font-weight: 900; color: #e0302a; line-height: 1; }
+.loto-emoji { font-size: clamp(2.5rem, 10vmin, 6rem); }
+.loto-empty { color: #cfe5d8; font-size: clamp(1.5rem, 6vmin, 3rem); }
+.loto-done .loto-letter { animation: pop .6s ease-out 3; }
+.loto-done .loto-cell.placed { animation: bob 1s ease-in-out 2; }
+
+.loto-deck .prompt-label { font-size: .75rem; letter-spacing: .1em; text-align: center; }
+.loto-deck { display: flex; flex-direction: column; align-items: center; gap: 8px; min-height: 120px; }
+.loto-card {
+  width: clamp(110px, 20vmin, 220px); cursor: grab; touch-action: none;
+  outline: 4px dashed #8fcaa9; outline-offset: 4px;
+}
+.loto-card.lifted { opacity: .3; }
+.loto-card.listen { color: var(--accent); }
+.loto-card.listen .icon { width: 60%; height: 60%; }
+.loto-hint { font-size: 1.8rem; animation: bob 1.4s ease-in-out infinite; }
+.loto-ghost { position: fixed; z-index: 40; pointer-events: none; margin: 0; box-shadow: 0 18px 40px rgba(0,0,0,.25); }
+.loto-fly { position: fixed; z-index: 40; pointer-events: none; object-fit: contain; transition: all .4s cubic-bezier(.3,.7,.3,1); }
+body[data-fit="cover"] .loto-fly { object-fit: cover; border-radius: 10px; }
+.deal { animation: deal .35s ease-out; }
+@keyframes deal { from { transform: translateY(40px) scale(.7) rotate(8deg); opacity: 0; } }
+
+@media (min-aspect-ratio: 1/1) {
+  .loto { flex-direction: row; justify-content: center; gap: clamp(20px, 4vw, 56px); }
+  .loto-board { width: min(620px, 58vw, calc(100dvh - 150px)); }
+  .loto-deck { width: clamp(200px, 26vw, 320px); }
+  .loto-card { width: clamp(140px, 22vmin, 240px); }
+}

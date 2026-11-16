@@ -1,12 +1,12 @@
 // Service worker: makes the whole site (all packs, pictures and recordings) work offline.
 // Bump VERSION when you publish changes so devices pick them up quickly.
-const VERSION = 'uen-v1';
+const VERSION = 'uen-v3';
 
 const SHELL = [
   './', 'index.html', 'play.html', 'manifest.webmanifest', 'css/style.css',
   'js/hub.js', 'js/play.js', 'js/pwa.js',
   'js/core/dom.js', 'js/core/storage.js', 'js/core/packs.js', 'js/core/audio.js', 'js/core/fx.js', 'js/core/widgets.js',
-  'js/modes/index.js', 'js/modes/learn.js', 'js/modes/quiz.js',
+  'js/modes/index.js', 'js/modes/learn.js', 'js/modes/quiz.js', 'js/modes/loto.js',
   'icons/icon-192.png', 'icons/icon-512.png', 'packs/index.json',
 ];
 
@@ -45,6 +45,7 @@ self.addEventListener('activate', (e) => {
 self.addEventListener('fetch', (e) => {
   const req = e.request;
   if (req.method !== 'GET' || new URL(req.url).origin !== location.origin) return;
+  if (req.headers.has('range')) return; // media range requests: let the browser handle them
   e.respondWith((async () => {
     const cache = await caches.open(VERSION);
     const cached = await cache.match(req, { ignoreSearch: req.mode === 'navigate' });

@@ -20,8 +20,12 @@ async function init() {
 
   list.replaceChildren(...packs.map((p) =>
     h('article', { class: 'pack-card' },
-      h('a', { class: 'pack-cover', href: `play.html?pack=${p.id}&mode=${p.modes[0]}`, 'aria-label': p.title },
-        h('img', { src: p.coverUrl || p.items[0]?.imageUrl, alt: '' })),
+      h('a', { class: `pack-cover ${p.settings.imageFit === 'cover' ? 'fit-cover' : ''}`, href: `play.html?pack=${p.id}&mode=${p.modes[0]}`, 'aria-label': p.title },
+        p.letter
+          ? h('div', { class: 'letter-cover' },
+              h('span', { class: 'letter-big' }, p.letter),
+              h('div', { class: 'letter-thumbs' }, p.items.slice(0, 4).map((it) => h('img', { src: it.imageUrl, alt: '' }))))
+          : h('img', { src: p.coverUrl || p.items[0]?.imageUrl, alt: '' })),
       h('div', { class: 'pack-body' },
         h('h2', {}, p.title),
         p.subtitle ? h('p', { class: 'muted' }, p.subtitle) : null,

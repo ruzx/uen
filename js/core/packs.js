@@ -24,8 +24,11 @@ function normalizePack(pack, id, dir) {
   pack.modes ??= ['learn', 'quiz'];
   pack.settings ??= {};
   pack.coverUrl = pack.cover ? new URL(pack.cover, dir).href : null;
+  const letter = pack.letter?.toLocaleLowerCase('tt');
   pack.items = (pack.items || []).map((it) => {
-    const words = it.words || [{ tt: it.tt, ru: it.ru }];
+    let words = it.words || [{ tt: it.tt, ru: it.ru }];
+    // letter packs: mark words that start with the pack's letter (rendered in red)
+    if (letter) words = words.map((w) => (w.tt?.toLocaleLowerCase('tt').startsWith(letter) ? { ...w, hl: letter.length } : w));
     return {
       ...it,
       words,

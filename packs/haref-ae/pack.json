@@ -1,0 +1,58 @@
+{
+  "title": "Ә хәрефе",
+  "subtitle": "Сүзләр · слова на букву Ә",
+  "letter": "Ә",
+  "modes": [
+    "learn",
+    "quiz",
+    "loto",
+    "loto-ear"
+  ],
+  "settings": {
+    "choices": 4
+  },
+  "items": [
+    {
+      "id": "alifba",
+      "tt": "әлифба",
+      "ru": "азбука",
+      "image": "img/alifba.webp",
+      "audio": "audio/alifba.wav"
+    },
+    {
+      "id": "atach",
+      "tt": "әтәч",
+      "ru": "петух",
+      "image": "img/atach.webp",
+      "audio": "audio/atach.wav"
+    },
+    {
+      "id": "ani",
+      "tt": "әни",
+      "ru": "мама",
+      "image": "img/ani.webp",
+      "audio": "audio/ani.wav"
+    },
+    {
+      "id": "ati",
+      "tt": "әти",
+      "ru": "папа",
+      "image": "img/ati.webp",
+      "audio": "audio/ati.wav"
+    },
+    {
+      "id": "abi",
+      "tt": "әби",
+      "ru": "бабушка",
+      "image": "img/abi.webp",
+      "audio": "audio/abi.wav"
+    },
+    {
+      "id": "aflisun",
+      "tt": "әфлисун",
+      "ru": "апельсин",
+      "image": "img/aflisun.webp",
+      "audio": "audio/aflisun.wav"
+    }
+  ]
+}

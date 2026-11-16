@@ -7,7 +7,8 @@ export function phrase(item, { big = true } = {}) {
   const showRu = getSettings().showRu;
   return h('div', { class: `phrase ${big ? 'phrase-big' : ''}` },
     h('div', { class: 'phrase-tt', lang: 'tt' },
-      item.words.map((w) => h('span', { class: `w ${w.role ? 'w-' + w.role : ''}` }, w.tt))),
+      item.words.map((w) => h('span', { class: `w ${w.role ? 'w-' + w.role : ''}` },
+        w.hl ? [h('span', { class: 'hl' }, w.tt.slice(0, w.hl)), w.tt.slice(w.hl)] : w.tt))),
     showRu && item.ru ? h('div', { class: 'phrase-ru', lang: 'ru' }, item.ru) : null,
   );
 }

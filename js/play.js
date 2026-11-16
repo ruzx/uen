@@ -80,7 +80,8 @@ function switchMode(m) {
 function showStart() {
   const mode = modes[modeId];
   showOverlay(
-    pack.coverUrl ? h('img', { class: 'overlay-img bob', src: pack.coverUrl, alt: '' }) : null,
+    pack.letter ? h('div', { class: 'overlay-letter bob' }, pack.letter)
+      : pack.coverUrl ? h('img', { class: 'overlay-img bob', src: pack.coverUrl, alt: '' }) : null,
     h('h2', {}, pack.title),
     h('p', { class: 'muted' }, `${mode.emoji} ${mode.title.tt} · ${mode.title.ru}`),
     h('button', { class: 'btn btn-play', type: 'button', 'aria-label': 'Башлау', onclick: () => { audio.unlock(); run(); } }, icon('play')),
@@ -120,6 +121,8 @@ async function init() {
     els.stage.replaceChildren(h('p', { class: 'error' }, String(e.message || e)));
     return;
   }
+  audio.preload(pack.items);
+  if (pack.settings.imageFit) document.body.dataset.fit = pack.settings.imageFit; // "cover" for photo tiles
   if (!modes[modeId] || !pack.modes.includes(modeId)) modeId = pack.modes[0];
   document.title = `${pack.title} — Уен`;
   els.title.textContent = pack.title;

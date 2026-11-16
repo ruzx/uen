@@ -1,0 +1,72 @@
+{
+  "title": "И хәрефе",
+  "subtitle": "Сүзләр · слова на букву И",
+  "letter": "И",
+  "modes": [
+    "learn",
+    "quiz",
+    "loto",
+    "loto-ear"
+  ],
+  "settings": {
+    "choices": 4
+  },
+  "items": [
+    {
+      "id": "iman",
+      "tt": "имән",
+      "ru": "дуб",
+      "image": "img/iman.webp",
+      "audio": "audio/iman.wav"
+    },
+    {
+      "id": "ike",
+      "tt": "ике",
+      "ru": "два",
+      "image": "img/ike.webp",
+      "audio": "audio/ike.wav"
+    },
+    {
+      "id": "iris",
+      "tt": "ирис",
+      "ru": "ирис",
+      "image": "img/iris.webp",
+      "audio": "audio/iris.wav"
+    },
+    {
+      "id": "itek",
+      "tt": "итек",
+      "ru": "сапоги",
+      "image": "img/itek.webp",
+      "audio": "audio/itek.wav"
+    },
+    {
+      "id": "ishak",
+      "tt": "ишәк",
+      "ru": "осёл",
+      "image": "img/ishak.webp",
+      "audio": "audio/ishak.wav"
+    },
+    {
+      "id": "ishek",
+      "tt": "ишек",
+      "ru": "дверь",
+      "image": "img/ishek.webp",
+      "audio": "audio/ishek.wav"
+    },
+    {
+      "id": "ipi",
+      "tt": "ипи",
+      "ru": "хлеб",
+      "image": "img/ipi.webp",
+      "audio": "audio/ipi.wav"
+    },
+    {
+      "id": "itak",
+      "tt": "итәк",
+      "ru": "юбка",
+      "image": "img/itak.webp",
+      "audio": "audio/itak.wav"
+    }
+  ]
+}

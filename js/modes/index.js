@@ -1,6 +1,6 @@
 // Registry of game modes. To add a new game type:
 //   1. create js/modes/<id>.js exporting { id, title:{tt,ru}, emoji, minItems, start(ctx) }
-//   2. import + register it here
+//   2. import + register it here (and add the file to SHELL in sw.js)
 //   3. list its id in a pack's "modes" array
 //
 // start(ctx) receives:
@@ -12,5 +12,6 @@
 
 import learn from './learn.js';
 import quiz from './quiz.js';
+import { loto, lotoEar } from './loto.js';
 
-export const modes = Object.fromEntries([learn, quiz].map((m) => [m.id, m]));
+export const modes = Object.fromEntries([learn, quiz, loto, lotoEar].map((m) => [m.id, m]));

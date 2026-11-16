@@ -1,3 +1,9 @@
 {
-  "packs": ["heroes"]
+  "packs": [
+    "heroes",
+    "hayvannar",
+    "haref-a",
+    "haref-ae",
+    "haref-i"
+  ]
 }
