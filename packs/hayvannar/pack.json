@@ -1,7 +1,7 @@
 {
   "title": "Хайваннар",
   "subtitle": "Йорт хайваннары · домашние животные",
-  "cover": "img/et.webp",
+  "cover": "img/et.svg",
   "modes": [
     "learn",
     "quiz",
@@ -10,7 +10,6 @@
   ],
   "settings": {
     "choices": 4,
-    "imageFit": "cover",
     "center": "🏡"
   },
   "items": [
@@ -18,63 +17,63 @@
       "id": "at",
       "tt": "ат",
       "ru": "лошадь",
-      "image": "img/at.webp",
+      "image": "img/at.svg",
       "audio": "audio/at.wav"
     },
     {
       "id": "pesi",
       "tt": "песи",
       "ru": "кошка",
-      "image": "img/pesi.webp",
+      "image": "img/pesi.svg",
       "audio": "audio/pesi.wav"
     },
     {
       "id": "et",
       "tt": "эт",
       "ru": "собака",
-      "image": "img/et.webp",
+      "image": "img/et.svg",
       "audio": "audio/et.wav"
     },
     {
       "id": "syer",
       "tt": "сыер",
       "ru": "корова",
-      "image": "img/syer.webp",
+      "image": "img/syer.svg",
       "audio": "audio/syer.wav"
     },
     {
       "id": "saryk",
       "tt": "сарык",
       "ru": "овца",
-      "image": "img/saryk.webp",
+      "image": "img/saryk.svg",
       "audio": "audio/saryk.wav"
     },
     {
       "id": "kaja",
       "tt": "кәҗә",
       "ru": "коза",
-      "image": "img/kaja.webp",
+      "image": "img/kaja.svg",
       "audio": "audio/kaja.wav"
     },
     {
       "id": "tavyk",
       "tt": "тавык",
       "ru": "курица",
-      "image": "img/tavyk.webp",
+      "image": "img/tavyk.svg",
       "audio": "audio/tavyk.wav"
     },
     {
       "id": "atach",
       "tt": "әтәч",
       "ru": "петух",
-      "image": "img/atach.webp",
+      "image": "img/atach.svg",
       "audio": "audio/atach.wav"
     },
     {
       "id": "dunggyz",
       "tt": "дуңгыз",
       "ru": "свинья",
-      "image": "img/dunggyz.webp",
+      "image": "img/dunggyz.svg",
       "audio": "audio/dunggyz.wav"
     }
   ]
