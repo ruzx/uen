@@ -314,3 +314,41 @@ body[data-fit="cover"] .loto-fly { object-fit: cover; border-radius: 10px; }
   .loto-deck { width: clamp(200px, 26vw, 320px); }
   .loto-card { width: clamp(140px, 22vmin, 240px); }
 }
+
+/* ---------- memory (Пар тап) ---------- */
+.mem-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: clamp(8px, 1.8vw, 16px);
+  width: min(720px, 100%, calc((100dvh - 210px) * 4 / 3));
+  perspective: 1000px;
+}
+.mem-grid.mem-4, .mem-grid.mem-6 { grid-template-columns: repeat(3, 1fr); width: min(560px, 100%, calc((100dvh - 210px) * 1.5)); }
+@media (max-aspect-ratio: 3/4) {
+  .mem-grid.mem-12, .mem-grid.mem-10, .mem-grid.mem-8 { grid-template-columns: repeat(3, 1fr); width: min(100%, calc((100dvh - 210px) * 3 / 4)); }
+  .mem-grid.mem-4, .mem-grid.mem-6 { grid-template-columns: repeat(2, 1fr); }
+}
+.mem-card { border: 0; padding: 0; background: none; aspect-ratio: 1; }
+.mem-inner {
+  position: relative; width: 100%; height: 100%; transform-style: preserve-3d;
+  transition: transform .45s cubic-bezier(.3,.7,.3,1.2);
+}
+.mem-card.open .mem-inner { transform: rotateY(180deg); }
+.mem-face {
+  position: absolute; inset: 0; border-radius: 22px; box-shadow: var(--shadow);
+  backface-visibility: hidden; -webkit-backface-visibility: hidden; display: grid; place-items: center;
+}
+.mem-back {
+  background: var(--accent) radial-gradient(circle, rgba(255,255,255,.18) 2px, transparent 2.5px) 0 0 / 16px 16px;
+  color: rgba(255,255,255,.9);
+}
+.mem-back .icon { width: 42%; height: 42%; }
+.mem-card:not(.open):hover .mem-inner { transform: translateY(-3px); }
+.mem-front { background: var(--card); transform: rotateY(180deg); padding: 8%; overflow: hidden; }
+.mem-front img { width: 100%; height: 100%; object-fit: contain; pointer-events: none; }
+.mem-word {
+  position: absolute; left: 0; right: 0; bottom: 4%; text-align: center; font-weight: 900;
+  font-size: clamp(.75rem, 2.4vmin, 1.15rem); text-shadow: 0 0 4px #fff, 0 0 8px #fff;
+}
+.mem-card.matched .mem-front { box-shadow: inset 0 0 0 5px #8fd6ae, var(--shadow); }
+.pop-in { animation: pop .45s; }
+body[data-fit="cover"] .mem-front { padding: 0; }
+body[data-fit="cover"] .mem-front img { object-fit: cover; }

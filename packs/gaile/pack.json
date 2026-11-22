@@ -1,0 +1,60 @@
+{
+  "title": "Минем гаиләм",
+  "subtitle": "Гаилә · семья",
+  "cover": "img/abi.svg",
+  "modes": [
+    "learn",
+    "quiz",
+    "memory",
+    "loto",
+    "loto-ear"
+  ],
+  "settings": {
+    "choices": 4,
+    "center": "🏠"
+  },
+  "items": [
+    {
+      "id": "ani",
+      "tt": "әни",
+      "ru": "мама",
+      "image": "img/ani.svg",
+      "audio": "audio/ani.wav"
+    },
+    {
+      "id": "ati",
+      "tt": "әти",
+      "ru": "папа",
+      "image": "img/ati.svg",
+      "audio": "audio/ati.wav"
+    },
+    {
+      "id": "abi",
+      "tt": "әби",
+      "ru": "бабушка",
+      "image": "img/abi.svg",
+      "audio": "audio/abi.wav"
+    },
+    {
+      "id": "babai",
+      "tt": "бабай",
+      "ru": "дедушка",
+      "image": "img/babai.svg",
+      "audio": "audio/babai.wav"
+    },
+    {
+      "id": "kyz",
+      "tt": "кыз",
+      "ru": "девочка",
+      "image": "img/kyz.svg",
+      "audio": "audio/kyz.wav"
+    },
+    {
+      "id": "malai",
+      "tt": "малай",
+      "ru": "мальчик",
+      "image": "img/malai.svg",
+      "audio": "audio/malai.wav"
+    }
+  ]
+}

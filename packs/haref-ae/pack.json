@@ -5,6 +5,7 @@
   "modes": [
     "learn",
     "quiz",
+    "memory",
     "loto",
     "loto-ear"
   ],
