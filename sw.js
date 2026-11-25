@@ -8,13 +8,13 @@
 // otherwise stale copies could be stored.
 //
 // Bump VERSION when you publish changes so media is re-downloaded.
-const VERSION = 'uen-v6';
+const VERSION = 'uen-v7';
 
 const SHELL = [
   './', 'index.html', 'play.html', 'manifest.webmanifest', 'css/style.css',
   'js/hub.js', 'js/play.js', 'js/pwa.js',
   'js/core/dom.js', 'js/core/storage.js', 'js/core/packs.js', 'js/core/audio.js', 'js/core/fx.js', 'js/core/widgets.js',
-  'js/modes/index.js', 'js/modes/learn.js', 'js/modes/quiz.js', 'js/modes/loto.js', 'js/modes/memory.js',
+  'js/modes/index.js', 'js/modes/learn.js', 'js/modes/quiz.js', 'js/modes/loto.js', 'js/modes/memory.js', 'js/modes/shar.js',
   'icons/icon-192.png', 'icons/icon-512.png', 'packs/index.json',
 ];
 

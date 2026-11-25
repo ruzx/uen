@@ -129,6 +129,7 @@ async function init() {
   pack = await loadPack(packId);
   audio.preload?.(pack.items);
   if (pack.settings.imageFit) document.body.dataset.fit = pack.settings.imageFit; // "cover" for photo tiles
+  if (pack.settings.keepColor) document.body.dataset.keepColor = ''; // colours pack: don't grey out loto pictures
   if (!modes[modeId] || !pack.modes.includes(modeId)) modeId = pack.modes[0];
   document.title = `${pack.title} — Уен`;
   els.title.textContent = pack.title;

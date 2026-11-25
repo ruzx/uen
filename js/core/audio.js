@@ -103,5 +103,6 @@ export const sfx = {
   correct() { if (!muted()) { tone(660, 0, 0.14); tone(880, 0.11, 0.28); } },
   wrong() { if (!muted()) { tone(260, 0, 0.16, { type: 'triangle', gain: 0.1 }); tone(200, 0.12, 0.22, { type: 'triangle', gain: 0.1 }); } },
   win() { if (!muted()) [523, 659, 784, 1047, 1319].forEach((f, i) => tone(f, i * 0.11, 0.35, { gain: 0.11 })); },
+  pop() { if (!muted()) { tone(900, 0, 0.06, { type: 'square', gain: 0.05 }); tone(320, 0.03, 0.12, { type: 'triangle', gain: 0.09 }); } },
   star() { if (!muted()) tone(1200, 0, 0.12, { gain: 0.06 }); },
 };

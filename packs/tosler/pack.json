@@ -1,0 +1,109 @@
+{
+  "title": "Төсләр",
+  "subtitle": "Төсләр · цвета",
+  "cover": "img/palitra.svg",
+  "modes": [
+    "learn",
+    "shar",
+    "quiz",
+    "memory",
+    "loto",
+    "loto-ear"
+  ],
+  "settings": {
+    "choices": 4,
+    "rounds": 8,
+    "center": "🎨",
+    "keepColor": true
+  },
+  "items": [
+    {
+      "id": "kyzyl",
+      "tt": "кызыл",
+      "ru": "красный",
+      "color": "#e53935",
+      "image": "img/kyzyl.svg",
+      "audio": "audio/kyzyl.wav"
+    },
+    {
+      "id": "sary",
+      "tt": "сары",
+      "ru": "жёлтый",
+      "color": "#fdd835",
+      "image": "img/sary.svg",
+      "audio": "audio/sary.wav"
+    },
+    {
+      "id": "yashel",
+      "tt": "яшел",
+      "ru": "зелёный",
+      "color": "#43a047",
+      "image": "img/yashel.svg",
+      "audio": "audio/yashel.wav"
+    },
+    {
+      "id": "zanggar",
+      "tt": "зәңгәр",
+      "ru": "синий",
+      "color": "#1e88e5",
+      "image": "img/zanggar.svg",
+      "audio": "audio/zanggar.wav"
+    },
+    {
+      "id": "ak",
+      "tt": "ак",
+      "ru": "белый",
+      "color": "#ffffff",
+      "image": "img/ak.svg",
+      "audio": "audio/ak.wav"
+    },
+    {
+      "id": "kara",
+      "tt": "кара",
+      "ru": "чёрный",
+      "color": "#26211f",
+      "image": "img/kara.svg",
+      "audio": "audio/kara.wav"
+    },
+    {
+      "id": "shamaha",
+      "tt": "шәмәхә",
+      "ru": "фиолетовый",
+      "color": "#8e24aa",
+      "image": "img/shamaha.svg",
+      "audio": "audio/shamaha.wav"
+    },
+    {
+      "id": "kyzgylt_sary",
+      "tt": "кызгылт сары",
+      "ru": "оранжевый",
+      "color": "#fb8c00",
+      "image": "img/kyzgylt_sary.svg",
+      "audio": "audio/kyzgylt_sary.wav"
+    },
+    {
+      "id": "koran",
+      "tt": "көрән",
+      "ru": "коричневый",
+      "color": "#8d5a3b",
+      "image": "img/koran.svg",
+      "audio": "audio/koran.wav"
+    },
+    {
+      "id": "al",
+      "tt": "ал",
+      "ru": "розовый",
+      "color": "#f78fb3",
+      "image": "img/al.svg",
+      "audio": "audio/al.wav"
+    },
+    {
+      "id": "sory",
+      "tt": "соры",
+      "ru": "серый",
+      "color": "#9e9e9e",
+      "image": "img/sory.svg",
+      "audio": "audio/sory.wav"
+    }
+  ]
+}

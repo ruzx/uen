@@ -277,6 +277,8 @@ body[data-fit="cover"] .loto-cell:not(.loto-center):not(.loto-empty) { padding: 
 .loto-cell img { width: 100%; height: 100%; object-fit: contain; pointer-events: none;
   opacity: .28; filter: grayscale(.7); transition: opacity .3s, filter .3s; }
 .loto-cell.placed img { opacity: 1; filter: none; }
+body[data-keep-color] .loto-cell img { opacity: .45; filter: saturate(.9); }
+body[data-keep-color] .loto-cell.placed img { opacity: 1; filter: none; }
 .loto-cell.over { box-shadow: inset 0 0 0 6px #5cc48f; background: #effaf3; }
 .loto-cell.placed { box-shadow: inset 0 0 0 4px #8fd6ae; cursor: default; }
 .loto-word {
@@ -352,3 +354,35 @@ body[data-fit="cover"] .loto-fly { object-fit: cover; border-radius: 10px; }
 .pop-in { animation: pop .45s; }
 body[data-fit="cover"] .mem-front { padding: 0; }
 body[data-fit="cover"] .mem-front img { object-fit: cover; }
+
+/* ---------- balloons mode (Шарлар) ---------- */
+.balloons {
+  display: grid; grid-template-columns: repeat(var(--n, 4), 1fr); align-items: end;
+  gap: clamp(6px, 2.4vw, 28px);
+  width: min(900px, 100%, calc((100dvh - 250px) * var(--n, 4) * .66));
+}
+@media (max-aspect-ratio: 3/4) {
+  /* phone portrait: 4 balloons as 2×2 */
+  .balloons.n4 { grid-template-columns: repeat(2, 1fr); width: min(100%, calc((100dvh - 290px) * .66)); }
+}
+.stage .prompt { position: relative; z-index: 2; }
+.balloon {
+  background: none; border: 0; padding: 0; aspect-ratio: 2 / 3; cursor: pointer;
+  touch-action: manipulation; transition: opacity .3s;
+  animation: b-rise .9s cubic-bezier(.2, .8, .3, 1) backwards; animation-delay: var(--d, 0s);
+}
+.balloon svg {
+  width: 100%; height: 100%; display: block; transform-origin: 50% 70%;
+  filter: drop-shadow(0 8px 8px rgba(40, 60, 50, .14));
+  animation: b-bob 3s ease-in-out infinite; animation-delay: calc(var(--b, 0s) * -1);
+}
+.balloon:active svg { transform: scale(.95); }
+.balloon.shake { animation: shake .45s; }
+.balloon.dim { opacity: .35; }
+.balloon.popped { pointer-events: none; }
+.balloon.popped svg { animation: b-pop .35s ease-out forwards; }
+.balloon.away { pointer-events: none; animation: b-away 1.3s ease-in forwards; }
+@keyframes b-rise { from { transform: translateY(70vh); } }
+@keyframes b-bob { 0%, 100% { transform: translateY(0) rotate(-2deg); } 50% { transform: translateY(-12px) rotate(2deg); } }
+@keyframes b-pop { 40% { transform: scale(1.25); } 100% { transform: scale(.1); opacity: 0; } }
+@keyframes b-away { 60% { opacity: .5; } to { transform: translateY(-110vh); opacity: 0; } }

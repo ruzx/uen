@@ -14,5 +14,6 @@ import learn from './learn.js';
 import quiz from './quiz.js';
 import { loto, lotoEar } from './loto.js';
 import memory from './memory.js';
+import shar from './shar.js';
 
-export const modes = Object.fromEntries([learn, quiz, loto, lotoEar, memory].map((m) => [m.id, m]));
+export const modes = Object.fromEntries([learn, quiz, loto, lotoEar, memory, shar].map((m) => [m.id, m]));
